@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std; 
+class Qux
+{
+        public:
+                Qux() : _foo( "initialize foo to this!" ) {
+                cout<<_foo;
+                 }
+                // This is nearly equivalent to 
+                // Qux() { _foo = "initialize foo to this!"; }
+                // but without the extra call to construct an empty string
+
+        private:
+        std::string _foo;
+};
+
+int main(int argc, char const *argv[])
+{
+	Qux a;
+	return 0;
+}
